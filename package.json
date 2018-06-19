@@ -1,6 +1,6 @@
 {
   "name": "asynciteratorjs",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Async Iterator",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,8 @@
     "url": "https://github.com/IlyaKronos/AsyncIteratorJS/issues"
   },
   "homepage": "https://github.com/IlyaKronos/AsyncIteratorJS#readme",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "mocha": "^5.2.0"
   }
 }
