@@ -1,7 +1,7 @@
 {
   "name": "asynciteratorjs",
-  "version": "1.2.2",
-  "description": "Async Iterator",
+  "version": "1.2.3",
+  "description": "Async Iterator on Javascript that implementing a sequential iteration with the ability to use async functions within iterative functions",
   "main": "index.js",
   "scripts": {
     "test": "mocha"
