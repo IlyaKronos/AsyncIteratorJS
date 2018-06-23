@@ -77,7 +77,7 @@ class AsyncIterator {
     async iterate(func, another = false) {
         if (!await this.storage.hasMore()) { return (another ? this.results : []) }
 
-        this.results[this.iteration] = await func(await this.storage.getNext(), this.iteration)
+        this.results[this.iteration] = await func(await this.storage.getNext(), this.iteration, this.storage.elements)
         this.iteration++
 
         await this.iterate(func, true)

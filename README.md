@@ -13,14 +13,14 @@ async function main() {
     let iterator = new AsyncIterator([1, 2, 3, 4])
     let array = []
         
-    await iterator.iterate(async (value) => {
+    await iterator.iterate(async (value, key, dataset) => {
         await sleep(value * 1000)
             
-        array.push(value)
+        array.push({ key, value })
     })
     
-    // After 10 seconds (sleep function)
-    console.log(array) // [1, 2, 3, 4]
+    // After 10 seconds (because of sleep function)
+    console.log(array) // [{ key: 0, value: 1 }, { key: 1, value: 2 }, { key: 2, value: 3 }, { key: 3, value: 4 }]
 }
     
 main()
@@ -64,3 +64,11 @@ This function is iterating dataset
 | --- | --- | --- | --- |
 | func | <code>Promise</code> |  | Iteration function |
 | another | <code>Boolean</code> | <code>false</code> | Private variable |
+
+### Iteration function(value, key, array)
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>Any</code> | Iteration value |
+| key | <code>Number</code> | Iteration key |
+| array | <code>Array</code> | Iteration dataset |
